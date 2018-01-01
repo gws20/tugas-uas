@@ -1,0 +1,1 @@
+alert('SELAMAT DATANG\nby 15.8637');

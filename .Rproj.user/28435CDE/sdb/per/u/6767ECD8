@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "anov1<-function(y,x){\n  anov<-unlist(summary(aov(y~x)))\n  atribut<-c(\"Sumber\",\"Derajat bebas\",\"Sum of Square\",\"Mean Suare\",\"F-Value\",\"P-Value\")\n  Sumber<-c(\"Treatment\",\"Error\")\n  df<-c(anov[1],anov[2])\n  ss<-c(anov[3],anov[4])\n  ms<-c(anov[5],anov[6])\n  Fval<-c(anov[7],anov[8])\n  Pval<-c(anov[9],anov[10])\n  tabel<-data.frame(Sumber,df,ss,ms,Fval,Pval)\n  colnames(tabel)<-atribut\n  return(tabel)\n}\nanov2<-function(y,A,B){\n  options(digits = 0)\n  anov<-unlist(summary(aov(y~A+B)))\n  atribut<-c(\"SoV\",\"Derajat bebas\",\"Sum of Square\",\"Mean Suare\",\"F-hitung\",\"P-Value\")\n  Sumber<-c(\"Faktor A\",\"Faktor B\",\"Error\",\"Total\")\n  df<-c(anov[1],anov[2],anov[3],anov[1]+anov[2]+anov[3])\n  ss<-c(anov[4],anov[5],anov[6],anov[5]+anov[4]+anov[6])\n  ms<-c(anov[7],anov[8],anov[9],NA)\n  Fval<-c(anov[10],anov[11],anov[12],NA)\n  Pval<-c(anov[13],anov[14],anov[15],NA)\n  tabel<-data.frame(Sumber,df,ss,ms,Fval,Pval)\n  colnames(tabel)<-atribut\n  return(tabel)\n}",
+    "created" : 1499697271667.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "4168238004",
+    "id" : "6767ECD8",
+    "lastKnownWriteTime" : 31244212046397487,
+    "last_content_update" : 1500640768068,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

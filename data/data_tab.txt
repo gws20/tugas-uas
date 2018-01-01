@@ -1,0 +1,5 @@
+royal	ibm	udrwood	olivetti
+78	62	71	77
+57	49	62	60
+69	78	72	83
+71	66	59	67
